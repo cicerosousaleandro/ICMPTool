@@ -1,0 +1,10 @@
+^E:\PROJETOS\ICMPTOOL\BUILD\CMAKEFILES\97E65F8C3A09378D2963E511834EE193\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/Projetos/ICMPTool -BE:/Projetos/ICMPTool/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Projetos/ICMPTool/build/ICMPTool.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
