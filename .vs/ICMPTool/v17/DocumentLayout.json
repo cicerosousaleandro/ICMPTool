@@ -15,15 +15,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.c||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Projetos\\ICMPTool\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|P\u00E1ginas de Vis\u00E3o Geral do CMake||{B1CAA5B0-FEB1-4350-8AB9-F895876842F2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Projetos\\ICMPTool\\resources\\app.manifest||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\app.manifest||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Projetos\\ICMPTool\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CMakeLists.txt",
               "DocumentMoniker": "E:\\Projetos\\ICMPTool\\CMakeLists.txt",
               "RelativeDocumentMoniker": "CMakeLists.txt",
@@ -45,20 +42,12 @@
               "RelativeToolTip": "CMakeLists.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-04-20T00:18:37.141Z"
+              "WhenOpened": "2026-04-20T00:18:37.141Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "P\u00E1ginas de Vis\u00E3o Geral do CMake",
-              "DocumentMoniker": "P\u00E1ginas de Vis\u00E3o Geral do CMake",
-              "ToolTip": "P\u00E1ginas de Vis\u00E3o Geral do CMake",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-20T00:02:38.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "app.manifest",
               "DocumentMoniker": "E:\\Projetos\\ICMPTool\\resources\\app.manifest",
               "RelativeDocumentMoniker": "resources\\app.manifest",
@@ -66,7 +55,8 @@
               "RelativeToolTip": "resources\\app.manifest",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
-              "WhenOpened": "2026-04-19T23:46:07.619Z"
+              "WhenOpened": "2026-04-19T23:46:07.619Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -76,7 +66,7 @@
               "RelativeDocumentMoniker": "src\\tracert.c",
               "ToolTip": "E:\\Projetos\\ICMPTool\\src\\tracert.c",
               "RelativeToolTip": "src\\tracert.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-04-19T23:45:03.551Z",
               "EditorCaption": ""
@@ -89,7 +79,7 @@
               "RelativeDocumentMoniker": "src\\ping.c",
               "ToolTip": "E:\\Projetos\\ICMPTool\\src\\ping.c",
               "RelativeToolTip": "src\\ping.c",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAmwHcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-04-19T23:44:13.745Z",
               "EditorCaption": ""
@@ -102,9 +92,10 @@
               "RelativeDocumentMoniker": "src\\main.c",
               "ToolTip": "E:\\Projetos\\ICMPTool\\src\\main.c",
               "RelativeToolTip": "src\\main.c",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAmwLgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-19T23:40:22.51Z"
+              "WhenOpened": "2026-04-19T23:40:22.51Z",
+              "EditorCaption": ""
             }
           ]
         }
