@@ -24,7 +24,7 @@ events:
       The output was:
       0
       Vers├úo do MSBuild 17.13.19+0d9f5a35a para .NET Framework
-      Compila├º├úo de 19/04/2026 21:20:58 iniciada.
+      Compila├º├úo de 21/04/2026 12:07:10 iniciada.
       
       Projeto "E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\3.30.5-msvc23\\CompilerIdC\\CompilerIdC.vcxproj" no n├│ 1 (destinos padr├úo).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Aviso(s)
           0 Erro(s)
       
-      Tempo Decorrido 00:00:01.42
+      Tempo Decorrido 00:00:01.47
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -72,8 +72,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-zl881z"
-      binary: "E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-zl881z"
+      source: "E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-b6a4cu"
+      binary: "E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-b6a4cu"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -82,40 +82,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-zl881z'
+        Change Dir: 'E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-b6a4cu'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c0d04.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_63d78.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Vers├úo do MSBuild 17.13.19+0d9f5a35a para .NET Framework
-        Compila├º├úo de 19/04/2026 21:21:00 iniciada.
+        Compila├º├úo de 21/04/2026 12:07:13 iniciada.
         
-        Projeto "E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zl881z\\cmTC_c0d04.vcxproj" no n├│ 1 (destinos padr├úo).
+        Projeto "E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6a4cu\\cmTC_63d78.vcxproj" no n├│ 1 (destinos padr├úo).
         PrepareForBuild:
-          Criando o diret├│rio "cmTC_c0d04.dir\\Debug\\".
+          Criando o diret├│rio "cmTC_63d78.dir\\Debug\\".
           A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
-          Criando o diret├│rio "E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zl881z\\Debug\\".
-          Criando o diret├│rio "cmTC_c0d04.dir\\Debug\\cmTC_c0d04.tlog\\".
+          Criando o diret├│rio "E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6a4cu\\Debug\\".
+          Criando o diret├│rio "cmTC_63d78.dir\\Debug\\cmTC_63d78.tlog\\".
         InitializeBuildStatus:
-          Criando "cmTC_c0d04.dir\\Debug\\cmTC_c0d04.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
-          Tocando "cmTC_c0d04.dir\\Debug\\cmTC_c0d04.tlog\\unsuccessfulbuild".
+          Criando "cmTC_63d78.dir\\Debug\\cmTC_63d78.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_63d78.dir\\Debug\\cmTC_63d78.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c0d04.dir\\Debug\\\\" /Fd"cmTC_c0d04.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_63d78.dir\\Debug\\\\" /Fd"cmTC_63d78.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Vers├úo 19.43.34809 para x64
           Copyright (C) Microsoft Corporation. Todos os direitos reservados.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c0d04.dir\\Debug\\\\" /Fd"cmTC_c0d04.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_63d78.dir\\Debug\\\\" /Fd"cmTC_63d78.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zl881z\\Debug\\cmTC_c0d04.exe" /INCREMENTAL /ILK:"cmTC_c0d04.dir\\Debug\\cmTC_c0d04.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-zl881z/Debug/cmTC_c0d04.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-zl881z/Debug/cmTC_c0d04.lib" /MACHINE:X64  /machine:x64 cmTC_c0d04.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_c0d04.vcxproj -> E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zl881z\\Debug\\cmTC_c0d04.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6a4cu\\Debug\\cmTC_63d78.exe" /INCREMENTAL /ILK:"cmTC_63d78.dir\\Debug\\cmTC_63d78.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-b6a4cu/Debug/cmTC_63d78.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Projetos/ICMPTool/build/CMakeFiles/CMakeScratch/TryCompile-b6a4cu/Debug/cmTC_63d78.lib" /MACHINE:X64  /machine:x64 cmTC_63d78.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_63d78.vcxproj -> E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6a4cu\\Debug\\cmTC_63d78.exe
         FinalizeBuildStatus:
-          Excluindo o arquivo "cmTC_c0d04.dir\\Debug\\cmTC_c0d04.tlog\\unsuccessfulbuild".
-          Tocando "cmTC_c0d04.dir\\Debug\\cmTC_c0d04.tlog\\cmTC_c0d04.lastbuildstate".
-        Projeto de compila├º├úo pronto "E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zl881z\\cmTC_c0d04.vcxproj" (destinos padr├úo).
+          Excluindo o arquivo "cmTC_63d78.dir\\Debug\\cmTC_63d78.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_63d78.dir\\Debug\\cmTC_63d78.tlog\\cmTC_63d78.lastbuildstate".
+        Projeto de compila├º├úo pronto "E:\\Projetos\\ICMPTool\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6a4cu\\cmTC_63d78.vcxproj" (destinos padr├úo).
         
         Compila├º├úo com ├¬xito.
             0 Aviso(s)
             0 Erro(s)
         
-        Tempo Decorrido 00:00:01.29
+        Tempo Decorrido 00:00:01.46
         
       exitCode: 0
   -

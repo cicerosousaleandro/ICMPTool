@@ -1,0 +1,24 @@
+# Arquivos e pastas do Visual Studio
+.vs/
+*.suo
+*.user
+*.VC.db*
+ipch/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# Pastas de Build e Binários
+build/
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.tlog
+*.manifest
+*.idb
+*.exp
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

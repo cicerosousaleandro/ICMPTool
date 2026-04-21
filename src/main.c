@@ -1,16 +1,38 @@
 #include <windows.h>
 #include <stdio.h>
 
-void RunPing(const char* target);
-void RunTracert(const char* target);
-
 #define ID_BTN_PING 1001
-#define ID_BTN_TRACERT 1002
+#define ID_BTN_STOP 1002
+#define ID_BTN_TRACERT 1003
 #define ID_TXT_TARGET 2001
 #define ID_TXT_LOG 3001
 
+#define WM_PING_RESULT (WM_USER + 1)
+#define WM_PING_COMPLETE (WM_USER + 2)
+
+void RunPing(const char* target);
+void StopPing(void);
+void RunTracert(const char* target);
+
 HWND hMainWnd;
 HWND hLogWnd;
+HWND hBtnPing;
+HWND hBtnStop;
+
+volatile BOOL bPingRunning = FALSE;
+HANDLE hPingThread = NULL;
+
+void AddToLog(const char* text) {
+    int len = GetWindowTextLengthA(hLogWnd);
+    SendMessageA(hLogWnd, EM_SETSEL, len, len);
+    SendMessageA(hLogWnd, EM_REPLACESEL, FALSE, (LPARAM)text);
+}
+
+void EnablePingControls(BOOL enable) {
+    EnableWindow(hBtnPing, enable);
+    EnableWindow(hBtnStop, !enable);
+    bPingRunning = !enable;
+}
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     switch (msg) {
@@ -25,14 +47,20 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             140, 10, 200, 25,
             hwnd, (HMENU)ID_TXT_TARGET, NULL, NULL);
 
-        CreateWindowEx(0, "BUTTON", "Ping",
+        hBtnPing = CreateWindowEx(0, "BUTTON", "Ping",
             WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
             10, 50, 100, 30,
             hwnd, (HMENU)ID_BTN_PING, NULL, NULL);
 
-        CreateWindowEx(0, "BUTTON", "Tracert",
+        hBtnStop = CreateWindowEx(0, "BUTTON", "Parar",
             WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
             120, 50, 100, 30,
+            hwnd, (HMENU)ID_BTN_STOP, NULL, NULL);
+        EnableWindow(hBtnStop, FALSE);
+
+        CreateWindowEx(0, "BUTTON", "Tracert",
+            WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+            230, 50, 100, 30,
             hwnd, (HMENU)ID_BTN_TRACERT, NULL, NULL);
 
         hLogWnd = CreateWindowEx(WS_EX_CLIENTEDGE, "EDIT", "",
@@ -44,6 +72,18 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         break;
     }
 
+    case WM_PING_RESULT: {
+        char* msg = (char*)lParam;
+        AddToLog(msg);
+        HeapFree(GetProcessHeap(), 0, msg);
+        break;
+    }
+
+    case WM_PING_COMPLETE:
+        EnablePingControls(TRUE);
+        AddToLog("[INFO] Ping finalizado\r\n");
+        break;
+
     case WM_COMMAND:
         switch (LOWORD(wParam)) {
         case ID_BTN_PING: {
@@ -52,17 +92,20 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             GetWindowTextA(hTarget, target, sizeof(target));
 
             if (strlen(target) > 0) {
+                EnablePingControls(FALSE);
                 char logMsg[512];
-                sprintf_s(logMsg, sizeof(logMsg), "[PING] Iniciando ping para: %s\r\n", target);
-                int len = GetWindowTextLengthA(hLogWnd);
-                SendMessageA(hLogWnd, EM_SETSEL, len, len);
-                SendMessageA(hLogWnd, EM_REPLACESEL, FALSE, (LPARAM)logMsg);
+                sprintf_s(logMsg, sizeof(logMsg), "[PING] Iniciando ping continuo para: %s\r\n", target);
+                AddToLog(logMsg);
 
-                SendMessageA(hLogWnd, EM_SETSEL, len, len);
-                SendMessageA(hLogWnd, EM_REPLACESEL, FALSE, (LPARAM)"[INFO] Ping será implementado na Aula 3\r\n");
+                RunPing(target);
             }
             break;
         }
+
+        case ID_BTN_STOP:
+            AddToLog("[INFO] Parando ping...\r\n");
+            StopPing();
+            break;
 
         case ID_BTN_TRACERT: {
             char target[256];
@@ -72,12 +115,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             if (strlen(target) > 0) {
                 char logMsg[512];
                 sprintf_s(logMsg, sizeof(logMsg), "[TRACERT] Iniciando tracert para: %s\r\n", target);
-                int len = GetWindowTextLengthA(hLogWnd);
-                SendMessageA(hLogWnd, EM_SETSEL, len, len);
-                SendMessageA(hLogWnd, EM_REPLACESEL, FALSE, (LPARAM)logMsg);
+                AddToLog(logMsg);
 
-                SendMessageA(hLogWnd, EM_SETSEL, len, len);
-                SendMessageA(hLogWnd, EM_REPLACESEL, FALSE, (LPARAM)"[INFO] Tracert será implementado na Aula 4\r\n");
+                RunTracert(target);
             }
             break;
         }
@@ -85,6 +125,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         break;
 
     case WM_DESTROY:
+        if (bPingRunning) {
+            StopPing();
+        }
         PostQuitMessage(0);
         break;
 
@@ -111,7 +154,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     wc.lpszClassName = "ICMPToolClass";
 
     if (!RegisterClassExA(&wc)) {
-        MessageBoxA(NULL, "Falha ao registrar classe da janela!", "Erro", MB_ICONERROR);
+        MessageBoxA(NULL, "Falha ao registrar classe!", "Erro", MB_ICONERROR);
         return 1;
     }
 
@@ -120,7 +163,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
         "ICMPToolClass",
         "ICMPTool - Network Reconnaissance",
         WS_OVERLAPPEDWINDOW & ~WS_THICKFRAME & ~WS_MAXIMIZEBOX,
-        CW_USEDEFAULT, CW_USEDEFAULT, 570, 450,
+        CW_USEDEFAULT, CW_USEDEFAULT, 570, 480,
         NULL, NULL, hInstance, NULL
     );
 
