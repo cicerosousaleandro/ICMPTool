@@ -10,6 +10,9 @@
     <ClCompile Include="E:\Projetos\ICMPTool\src\tracert.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\Projetos\ICMPTool\src\scan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\Projetos\ICMPTool\CMakeLists.txt" />

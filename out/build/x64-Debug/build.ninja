@@ -73,6 +73,14 @@ build CMakeFiles\ICMPTool.dir\src\tracert.c.obj: C_COMPILER__ICMPTool_unscanned_
   TARGET_COMPILE_PDB = CMakeFiles\ICMPTool.dir\
   TARGET_PDB = ICMPTool.pdb
 
+build CMakeFiles\ICMPTool.dir\src\scan.c.obj: C_COMPILER__ICMPTool_unscanned_Debug E$:\Projetos\ICMPTool\src\scan.c || cmake_object_order_depends_target_ICMPTool
+  FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -std:c11 -MDd /W4 /GS
+  INCLUDES = -IE:\Projetos\ICMPTool\include
+  OBJECT_DIR = CMakeFiles\ICMPTool.dir
+  OBJECT_FILE_DIR = CMakeFiles\ICMPTool.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ICMPTool.dir\
+  TARGET_PDB = ICMPTool.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ICMPTool
@@ -81,7 +89,7 @@ build CMakeFiles\ICMPTool.dir\src\tracert.c.obj: C_COMPILER__ICMPTool_unscanned_
 #############################################
 # Link the executable ICMPTool.exe
 
-build ICMPTool.exe: C_EXECUTABLE_LINKER__ICMPTool_Debug CMakeFiles\ICMPTool.dir\src\main.c.obj CMakeFiles\ICMPTool.dir\src\ping.c.obj CMakeFiles\ICMPTool.dir\src\tracert.c.obj | E$:\Projetos\ICMPTool\resources\app.manifest
+build ICMPTool.exe: C_EXECUTABLE_LINKER__ICMPTool_Debug CMakeFiles\ICMPTool.dir\src\main.c.obj CMakeFiles\ICMPTool.dir\src\ping.c.obj CMakeFiles\ICMPTool.dir\src\tracert.c.obj CMakeFiles\ICMPTool.dir\src\scan.c.obj | E$:\Projetos\ICMPTool\resources\app.manifest
   FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows  /DYNAMICBASE /NXCOMPAT /MANIFESTUAC:NO /HIGHENTROPYVA
   LINK_LIBRARIES = iphlpapi.lib  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

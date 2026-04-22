@@ -13,10 +13,15 @@ add_executable(ICMPTool WIN32
     src/main.c
     src/ping.c
     src/tracert.c
+    src/scan.c
     resources/app.manifest
 )
 
-target_link_libraries(ICMPTool PRIVATE iphlpapi ws2_32)
+target_link_libraries(ICMPTool PRIVATE
+    iphlpapi
+    ws2_32
+)
+
 target_include_directories(ICMPTool PRIVATE include)
 
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
